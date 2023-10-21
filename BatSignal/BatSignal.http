@@ -1,0 +1,6 @@
+@BatSignal_HostAddress = http://localhost:5174
+
+GET {{BatSignal_HostAddress}}/hello
+Accept: application/json
+
+###

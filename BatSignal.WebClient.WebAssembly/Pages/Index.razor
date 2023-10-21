@@ -1,0 +1,25 @@
+﻿@page "/"
+
+<div class="container">
+    @if (!_userNameProvided)
+    {
+        <input placeholder="Please enter your username" type="text" @bind="_user"/>
+        <button @onclick="HandleConnectBtnClick">Connect</button>
+    }
+    else
+    {
+        <ul>
+            @foreach (var message in _messages.AsEnumerable().Reverse())
+            {
+                <li>@message</li>
+            }
+        </ul>
+    }
+</div>
+
+@code {
+
+    private bool _userNameProvided;
+
+}
+

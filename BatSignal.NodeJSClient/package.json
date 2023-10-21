@@ -1,0 +1,16 @@
+{
+  "name": "batsignal.webclient",
+  "version": "1.0.0",
+  "description": "a demo for bergmann",
+  "main": "app.ts",
+  "scripts": {
+    "start": "ts-node src/app.ts"
+  },
+  "author": "m.haslinger",
+  "license": "MIT",
+  "dependencies": {
+    "@microsoft/signalr": "^7.0.12",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
