@@ -41,6 +41,7 @@ public partial class Index : IChatHubClient, IDisposable
             Console.WriteLine($"Failed to connect: {ex.Message}");
         }
 
+        // thanks to web assembly we can use strongly typed server and client!
         _hubProxy = connection.CreateHubProxy<IChatHub>();
         _subscription = connection.Register<IChatHubClient>(this);
     }
@@ -56,6 +57,7 @@ public partial class Index : IChatHubClient, IDisposable
         _userNameProvided = true;
     }
 
+    // stronlgy typed client method
     public async Task ReceiveMessage(string user, string message)
     {
         var msg = $"[{DateTime.Now}] {user}: {message}";
@@ -86,6 +88,7 @@ public partial class Index : IChatHubClient, IDisposable
             return;
         }
         
+        // strongly typed server method
         await _hubProxy.SendMessage(_user, "I'm still here!");
     }
     
