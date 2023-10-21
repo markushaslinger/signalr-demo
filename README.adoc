@@ -1,0 +1,16 @@
+= SignalR Demo
+
+Contains:
+
+* SignalR Server (ASP.NET)
+* Terminal Client (.NET)
+* Terminal Client (NodeJS / TypeScript)
+* Web Client (WebAssembly / Blazor)
+
+Start Order:
+
+. BatSignal
+. Then at least two of the clients
+** The hub sends messages _only_ to _other_ clients (to show this works), so at least two connected clients are required to see anything happen
+
+As many different clients and client instances as desired can be started.
